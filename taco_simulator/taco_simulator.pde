@@ -4,6 +4,9 @@
      rotcline148
      JesusGoku
 */
+
+//IMAGENES(FONDO & INGREDIENTES)
+
 PImage back;
 PImage tortillaM;
 PImage tortillaH;
@@ -16,8 +19,59 @@ PImage pine;
 PImage red;
 PImage green;
 PImage dish;
-int x=100;
-int y=90;
+
+//
+
+
+//MEDIDAS PARA LOS INGREDIENTES DEL TACO
+
+int tacoSW=100;
+int tacoSH=90;
+
+//
+
+
+//COORDENADAS DE LOS INGREDIENTES
+int coToUnX=130;
+int coToUnY=215;
+
+int coToDoX=220;
+int coToDoY=215;
+
+int coQuX=220;
+int coQuY=355;
+
+int coPaX=510;
+int coPaY=485;
+
+int coBiX=370;
+int coBiY=570;
+
+int coPasX=510;
+int coPasY=485;
+
+int coCeX=600;
+int coCeY=485;
+
+int coPiX=510;
+int coPiY=570;
+
+int coSaRX=740;
+int coSaRY=485;
+
+int coSaVX=740;
+int coSaVY=570;
+//
+
+
+//TAMAÑO DE LOS INGREDIENTES
+int ingW=80;
+int ingH=75;
+
+int ingPiH=170;
+//
+
+
 
 
 /*
@@ -35,9 +89,13 @@ Salsa R    740X,485Y  820X,550Y  A=80*75
 Salsa V    740X,570Y  820X,640Y  A=80*75
 */
 
+
 void setup(){
-  size(1000,700);
-  background(0,0,255);
+  size(1000,700);//TAMAÑO (ES MEJOR NO MOVER)
+
+  background(0,0,255);//COLOR DEL FONDO A ESCOGER
+  
+  //BUSCA LAS IMAGENES POR SU NOMBRE EN LA CARPETA "data"
   back = loadImage("Taco.png");
   tortillaM = loadImage("TortillaM.png");
   tortillaH = loadImage("TortillaH.png");
@@ -50,21 +108,29 @@ void setup(){
   red = loadImage("DelaRoja.png");
   green = loadImage("DelaVerde.png");
   dish = loadImage("Plato.png");
-
+  //
 
 
 }
 
 void draw(){
+  
   image(back, 0, 0, width*1, height*1);
-  image(dish, width/2, height/2-5, x, y);
-  image(tortillaM, width/2, height/2-5, x, y);
-  image(cheze, width/2, height/2-5, x, y);
-  image(pastor, width/2, height/2-5, x, y);
-  image(onion, width/2, height/2-5, x, y);
-  image(pasto, width/2, height/2-5, x, y);
-  image(pine, width/2, height/2-5, x, y);
-  image(red, width/2, height/2-5, x, y);
+  
+  
+  /*
+  image(dish, width/2, height/2-5, tacoSW, tacoSH);
+  image(tortillaM, width/2, height/2-5, tacoSW, tacoSH);
+  image(cheze, width/2, height/2-5, tacoSW, tacoSH);
+  image(pastor, width/2, height/2-5, tacoSW, tacoSH);
+  image(onion, width/2, height/2-5, tacoSW, tacoSH);
+  image(pasto, width/2, height/2-5, tacoSW, tacoSH);
+  image(pine, width/2, height/2-5, tacoSW, tacoSH);
+  image(red, width/2, height/2-5, tacoSW, tacoSH);
+  */
+  
+}
 
+void mouseClicked(){
   
 }
