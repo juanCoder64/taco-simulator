@@ -1,4 +1,4 @@
-abstract public class Ingrediente{
+abstract public class Ingredientes{
   protected int x, y;//ubicación
   protected int w = 100, h = 93;
   Ingredientes(int x, int y){

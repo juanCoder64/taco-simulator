@@ -41,7 +41,7 @@ int coToDoY=215;
 int coQuX=220;
 int coQuY=355;
 
-int coPaX=510;
+int coPaX=370;
 int coPaY=485;
 
 int coBiX=370;
@@ -63,6 +63,20 @@ int coSaVX=740;
 int coSaVY=570;
 //
 
+//Coordenadas de las posiciones de los platos
+
+int coPo1X=375;
+int coPo1Y=230;
+
+int coPo2X=375;
+int coPo2Y=346;
+
+int coPo3X=545;
+int coPo3Y=346;
+
+int coPo4X=735;
+int coPo4Y=346;
+
 
 //TAMAÑO DE LOS INGREDIENTES
 int ingW=80;
@@ -71,7 +85,21 @@ int ingH=75;
 int ingPiH=170;
 //
 
+boolean torM=false;
+boolean torH=false;
+boolean chiz=false;
+boolean bishop=false;
+boolean meat=false;
+boolean zil=false;
+boolean onon=false;
+boolean pineapp=false;
+boolean sRed=false;
+boolean sGreen=false;
 
+
+
+int currentX=coPo1X;
+int currentY=coPo1Y;
 
 
 /*
@@ -92,8 +120,6 @@ Salsa V    740X,570Y  820X,640Y  A=80*75
 
 void setup(){
   size(1000,700);//TAMAÑO (ES MEJOR NO MOVER)
-
-  background(0,0,255);//COLOR DEL FONDO A ESCOGER
   
   //BUSCA LAS IMAGENES POR SU NOMBRE EN LA CARPETA "data"
   back = loadImage("Taco.png");
@@ -113,10 +139,53 @@ void setup(){
 
 }
 
+
+
+//180,500 Flechas
+//290,600
+
 void draw(){
-  
+  /*print("MOUSEX= ");
+  print(mouseX);
+  print(" MOUSEY= ");
+  print(mouseY);
+  */
+  background(0,0,255);//COLOR DEL FONDO A ESCOGER
+  imageMode(CORNER);
   image(back, 0, 0, width*1, height*1);
   
+  image(dish,currentX,currentY,tacoSW,tacoSH);
+  
+  if(torM==true)
+  {
+    imageMode(CENTER);
+    image(tortillaM,mouseX,mouseY,tacoSW,tacoSH);
+  }
+  else if(torH==true)
+  {
+    imageMode(CENTER);
+    image(tortillaH,mouseX,mouseY,tacoSW,tacoSH);
+  }
+  else if(chiz==true)
+  {
+    imageMode(CENTER);
+    image(cheze,mouseX,mouseY,tacoSW,tacoSH);
+  }
+  else if(bishop==true)
+  {
+    imageMode(CENTER);
+    image(pastor,mouseX,mouseY,tacoSW,tacoSH);
+  }
+  else if(meat==true)
+  {
+    imageMode(CENTER);
+    image(beef,mouseX,mouseY,tacoSW,tacoSH);
+  }
+  else if(zil==true)
+  {
+    imageMode(CENTER);
+    image(pasto,mouseX,mouseY,tacoSW,tacoSH);
+  }
   
   /*
   image(dish, width/2, height/2-5, tacoSW, tacoSH);
@@ -132,5 +201,105 @@ void draw(){
 }
 
 void mouseClicked(){
+  
+  if(mouseX>180&&mouseY>500)
+  {
+    if(mouseX<290&&mouseY<600)
+    {
+       if(currentX==coPo1X&&currentY==coPo1Y)
+       {
+          currentX=coPo2X;
+          currentY=coPo2Y;
+       }
+       else if(currentX==coPo2X&&currentY==coPo2Y)
+       {
+          currentX=coPo3X;
+          currentY=coPo3Y;
+       }
+       else if(currentX==coPo3X&&currentY==coPo3Y)
+       {
+          currentX=coPo4X;
+          currentY=coPo4Y;
+       }
+       else if(currentX==coPo4X&&currentY==coPo4Y)
+       {
+          currentX=coPo1X;
+          currentY=coPo1Y;
+       }
+       else
+       {
+          currentX=coPo1X;
+          currentY=coPo1Y;
+       }
+      
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  ///////////////TORTILLA DE MAIZ
+  if(mouseX>coToUnX&&mouseY>coToUnY)
+  {
+     if(mouseX<(coToUnX+ingW)&&mouseY<(coToUnY+ingH))
+     {
+       torM=true;
+     }
+  }
+  
+  ///////TORTILLA DE HARINA
+  if(mouseX>coToDoX&&mouseY>coToDoY)
+  {
+     if(mouseX<(coToDoX+ingW)&&mouseY<(coToDoY+ingH))
+     {
+       torH=true;
+     }
+  }
+  
+  ////////QUESO
+  if(mouseX>coQuX&&mouseY>coQuY)
+  {
+     if(mouseX<(coQuX+ingW)&&mouseY<(coQuY+ingH))
+     {
+       chiz=true;
+     }
+  }
+  
+  ///////PASTOR
+  if(mouseX>coPaX&&mouseY>coPaY)
+  {
+     if(mouseX<(coPaX+ingW)&&mouseY<(coPaY+ingH))
+     {
+       bishop=true;
+     }
+  }
+  
+  ////////BISTEC
+  if(mouseX>coBiX&&mouseY>coBiY)
+  {
+     if(mouseX<(coBiX+ingW)&&mouseY<(coBiY+ingH))
+     {
+       meat=true;
+     }
+  }
+  
+  //////////ELPASTITO
+  if(mouseX>coPasX&&mouseY>coPasY)
+  {
+     if(mouseX<(coPasX+ingW)&&mouseY<(coPasY+ingH))
+     {
+       zil=true;
+     }
+  }
   
 }
