@@ -209,10 +209,8 @@ void draw(){
 }
 
 void mouseClicked(){
-  
-  if(mouseX>180&&mouseY>500)
-  {
-    if(mouseX<290&&mouseY<600)
+  //////////////////////////FLECHA DERECHA
+  if(mouseX>180&&mouseY>500&&mouseX<290&&mouseY<600)
     {
        if(currentX==coPo1X&&currentY==coPo1Y)
        {
@@ -241,70 +239,173 @@ void mouseClicked(){
        }
       
     }
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  ////Soltar cosas
   
   ///////////////TORTILLA DE MAIZ
-  if(mouseX>coToUnX&&mouseY>coToUnY)
-  {
-     if(mouseX<(coToUnX+ingW)&&mouseY<(coToUnY+ingH))
+  if(torM==true)
+     {
+       torM=false;
+       if(mouseX>coPo1X && mouseX<coPo1X+tacoSW && mouseY>coPo1Y && mouseY<coPo1Y+tacoSH)//PLATO 1
+       {
+         //plato1.agregar(torM);
+       }
+       if(mouseX>coPo2X && mouseX<coPo2X+tacoSW && mouseY>coPo2Y && mouseY<coPo2Y+tacoSH)//PLATO 2
+       {
+         //plato2.agregar(torM);
+       }
+       if(mouseX>coPo3X && mouseX<coPo3X+tacoSW && mouseY>coPo3Y && mouseY<coPo3Y+tacoSH)//PLATO 3
+       {
+         //plato3.agregar(torM);
+       }
+       if(mouseX>coPo4X && mouseX<coPo4X+tacoSW && mouseY>coPo4Y && mouseY<coPo4Y+tacoSH)//PLATO 4
+       {
+         //plato4.agregar(torM);
+       }
+     }
+  
+  ///////TORTILLA DE HARINA
+  if(torH==true)
+     {
+       torH=false;
+       if(mouseX>coPo1X && mouseX<coPo1X+tacoSW && mouseY>coPo1Y && mouseY<coPo1Y+tacoSH)//PLATO 1
+       {
+         //plato1.agregar(torH);
+       }
+       if(mouseX>coPo2X && mouseX<coPo2X+tacoSW && mouseY>coPo2Y && mouseY<coPo2Y+tacoSH)//PLATO 2
+       {
+         //plato2.agregar(torH);
+       }
+       if(mouseX>coPo3X && mouseX<coPo3X+tacoSW && mouseY>coPo3Y && mouseY<coPo3Y+tacoSH)//PLATO 3
+       {
+         //plato3.agregar(torH);
+       }
+       if(mouseX>coPo4X && mouseX<coPo4X+tacoSW && mouseY>coPo4Y && mouseY<coPo4Y+tacoSH)//PLATO 4
+       {
+         //plato4.agregar(torH);
+       }
+     }
+  ////////QUESO
+  if(chiz==true)
+     {
+       chiz=false;
+       if(mouseX>coPo1X && mouseX<coPo1X+tacoSW && mouseY>coPo1Y && mouseY<coPo1Y+tacoSH)//PLATO 1
+       {
+         //plato1.agregar(chiz);
+       }
+       if(mouseX>coPo2X && mouseX<coPo2X+tacoSW && mouseY>coPo2Y && mouseY<coPo2Y+tacoSH)//PLATO 2
+       {
+         //plato2.agregar(chiz);
+       }
+       if(mouseX>coPo3X && mouseX<coPo3X+tacoSW && mouseY>coPo3Y && mouseY<coPo3Y+tacoSH)//PLATO 3
+       {
+         //plato3.agregar(chiz);
+       }
+       if(mouseX>coPo4X && mouseX<coPo4X+tacoSW && mouseY>coPo4Y && mouseY<coPo4Y+tacoSH)//PLATO 4
+       {
+         //plato4.agregar(chiz);
+       }
+     } 
+  
+  ///////PASTOR
+  if(bishop==true)
+     {
+       bishop=false;
+       if(mouseX>coPo1X && mouseX<coPo1X+tacoSW && mouseY>coPo1Y && mouseY<coPo1Y+tacoSH)//PLATO 1
+       {
+         //plato1.agregar(bishop);
+       }
+       if(mouseX>coPo2X && mouseX<coPo2X+tacoSW && mouseY>coPo2Y && mouseY<coPo2Y+tacoSH)//PLATO 2
+       {
+         //plato2.agregar(bishop);
+       }
+       if(mouseX>coPo3X && mouseX<coPo3X+tacoSW && mouseY>coPo3Y && mouseY<coPo3Y+tacoSH)//PLATO 3
+       {
+         //plato3.agregar(bishop);
+       }
+       if(mouseX>coPo4X && mouseX<coPo4X+tacoSW && mouseY>coPo4Y && mouseY<coPo4Y+tacoSH)//PLATO 4
+       {
+         //plato4.agregar(bishop);
+       }
+     }
+  ////////BISTEC
+  if(meat==true)
+     {
+       meat=false;
+       if(mouseX>coPo1X && mouseX<coPo1X+tacoSW && mouseY>coPo1Y && mouseY<coPo1Y+tacoSH)//PLATO 1
+       {
+         //plato1.agregar(meat);
+       }
+       if(mouseX>coPo2X && mouseX<coPo2X+tacoSW && mouseY>coPo2Y && mouseY<coPo2Y+tacoSH)//PLATO 2
+       {
+         //plato2.agregar(meat);
+       }
+       if(mouseX>coPo3X && mouseX<coPo3X+tacoSW && mouseY>coPo3Y && mouseY<coPo3Y+tacoSH)//PLATO 3
+       {
+         //plato3.agregar(meat);
+       }
+       if(mouseX>coPo4X && mouseX<coPo4X+tacoSW && mouseY>coPo4Y && mouseY<coPo4Y+tacoSH)//PLATO 4
+       {
+         //plato4.agregar(meat);
+       }
+     }
+  //////////CILANTRO
+  if(zil==true)
+     {
+       zil=false;
+       if(mouseX>coPo1X && mouseX<coPo1X+tacoSW && mouseY>coPo1Y && mouseY<coPo1Y+tacoSH)//PLATO 1
+       {
+         //plato1.agregar(zil);
+       }
+       if(mouseX>coPo2X && mouseX<coPo2X+tacoSW && mouseY>coPo2Y && mouseY<coPo2Y+tacoSH)//PLATO 2
+       {
+         //plato2.agregar(zil);
+       }
+       if(mouseX>coPo3X && mouseX<coPo3X+tacoSW && mouseY>coPo3Y && mouseY<coPo3Y+tacoSH)//PLATO 3
+       {
+         //plato3.agregar(zil);
+       }
+       if(mouseX>coPo4X && mouseX<coPo4X+tacoSW && mouseY>coPo4Y && mouseY<coPo4Y+tacoSH)//PLATO 4
+       {
+         //plato4.agregar(zil);
+       }
+     }
+     
+  
+  ////Agarrar cosas
+  
+  ///////////////TORTILLA DE MAIZ
+  if(mouseX>coToUnX&&mouseY>coToUnY&&mouseX<(coToUnX+ingW)&&mouseY<(coToUnY+ingH))
      {
        torM=true;
      }
-  }
   
   ///////TORTILLA DE HARINA
-  if(mouseX>coToDoX&&mouseY>coToDoY)
-  {
-     if(mouseX<(coToDoX+ingW)&&mouseY<(coToDoY+ingH))
+  if(mouseX>coToDoX&&mouseY>coToDoY&&mouseX<(coToDoX+ingW)&&mouseY<(coToDoY+ingH))
      {
        torH=true;
      }
-  }
   
   ////////QUESO
-  if(mouseX>coQuX&&mouseY>coQuY)
-  {
-     if(mouseX<(coQuX+ingW)&&mouseY<(coQuY+ingH))
+  if(mouseX>coQuX&&mouseY>coQuY&&mouseX<(coQuX+ingW)&&mouseY<(coQuY+ingH))
      {
        chiz=true;
      }
-  }
+     
   
   ///////PASTOR
-  if(mouseX>coPaX&&mouseY>coPaY)
-  {
-     if(mouseX<(coPaX+ingW)&&mouseY<(coPaY+ingH))
+  if(mouseX>coPaX&&mouseY>coPaY&&mouseX<(coPaX+ingW)&&mouseY<(coPaY+ingH))
      {
        bishop=true;
      }
-  }
   
   ////////BISTEC
-  if(mouseX>coBiX&&mouseY>coBiY)
-  {
-     if(mouseX<(coBiX+ingW)&&mouseY<(coBiY+ingH))
+  if(mouseX>coBiX&&mouseY>coBiY&&mouseX<(coBiX+ingW)&&mouseY<(coBiY+ingH))
      {
        meat=true;
      }
-  }
   
-  //////////ELPASTITO
-  if(mouseX>coPasX&&mouseY>coPasY)
-  {
-     if(mouseX<(coPasX+ingW)&&mouseY<(coPasY+ingH))
+  //////////CILANTRO
+  if(mouseX>coPasX&&mouseY>coPasY&&mouseX<(coPasX+ingW)&&mouseY<(coPasY+ingH))
      {
        zil=true;
      }

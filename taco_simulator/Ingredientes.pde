@@ -7,4 +7,5 @@ abstract public class Ingredientes{
   }
   abstract void arrastrar(boolean e);
   abstract void dibujar();
+  
 }
