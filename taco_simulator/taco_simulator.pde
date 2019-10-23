@@ -409,7 +409,7 @@ void mouseClicked(){
      {
        zil=true;
      }
-  }
+  
   //////////CEBOLLA
     if(mouseX>coCeX&&mouseY>coCeY)
   {
