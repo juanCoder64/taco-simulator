@@ -409,7 +409,10 @@ void mouseClicked(){
      {
        zil=true;
      }
+<<<<<<< Updated upstream
   
+=======
+>>>>>>> Stashed changes
   //////////CEBOLLA
     if(mouseX>coCeX&&mouseY>coCeY)
   {
