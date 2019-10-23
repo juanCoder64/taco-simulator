@@ -201,6 +201,7 @@ void draw(){
 }
 
 void mouseClicked(){
+  //////////////////////////FLECHA DERECHA
   if(mouseX>180&&mouseY>500&&mouseX<290&&mouseY<600)
     {
        if(currentX==coPo1X&&currentY==coPo1Y)
@@ -230,48 +231,6 @@ void mouseClicked(){
        }
       
     }
-  
-  
-  ////Agarrar cosas
-  
-  ///////////////TORTILLA DE MAIZ
-  if(mouseX>coToUnX&&mouseY>coToUnY&&mouseX<(coToUnX+ingW)&&mouseY<(coToUnY+ingH))
-     {
-       torM=true;
-     }
-  
-  ///////TORTILLA DE HARINA
-  if(mouseX>coToDoX&&mouseY>coToDoY&&mouseX<(coToDoX+ingW)&&mouseY<(coToDoY+ingH))
-     {
-       torH=true;
-     }
-  
-  ////////QUESO
-  if(mouseX>coQuX&&mouseY>coQuY&&mouseX<(coQuX+ingW)&&mouseY<(coQuY+ingH))
-     {
-       chiz=true;
-     }
-     
-  
-  ///////PASTOR
-  if(mouseX>coPaX&&mouseY>coPaY&&mouseX<(coPaX+ingW)&&mouseY<(coPaY+ingH))
-     {
-       bishop=true;
-     }
-  
-  ////////BISTEC
-  if(mouseX>coBiX&&mouseY>coBiY&&mouseX<(coBiX+ingW)&&mouseY<(coBiY+ingH))
-     {
-       meat=true;
-     }
-  
-  //////////CILANTRO
-  if(mouseX>coPasX&&mouseY>coPasY&&mouseX<(coPasX+ingW)&&mouseY<(coPasY+ingH))
-     {
-       zil=true;
-     }
-  
-  
   ////Soltar cosas
   
   ///////////////TORTILLA DE MAIZ
@@ -401,5 +360,45 @@ void mouseClicked(){
        {
          //plato4.agregar(zil);
        }
+     }
+     
+  
+  ////Agarrar cosas
+  
+  ///////////////TORTILLA DE MAIZ
+  if(mouseX>coToUnX&&mouseY>coToUnY&&mouseX<(coToUnX+ingW)&&mouseY<(coToUnY+ingH))
+     {
+       torM=true;
+     }
+  
+  ///////TORTILLA DE HARINA
+  if(mouseX>coToDoX&&mouseY>coToDoY&&mouseX<(coToDoX+ingW)&&mouseY<(coToDoY+ingH))
+     {
+       torH=true;
+     }
+  
+  ////////QUESO
+  if(mouseX>coQuX&&mouseY>coQuY&&mouseX<(coQuX+ingW)&&mouseY<(coQuY+ingH))
+     {
+       chiz=true;
+     }
+     
+  
+  ///////PASTOR
+  if(mouseX>coPaX&&mouseY>coPaY&&mouseX<(coPaX+ingW)&&mouseY<(coPaY+ingH))
+     {
+       bishop=true;
+     }
+  
+  ////////BISTEC
+  if(mouseX>coBiX&&mouseY>coBiY&&mouseX<(coBiX+ingW)&&mouseY<(coBiY+ingH))
+     {
+       meat=true;
+     }
+  
+  //////////CILANTRO
+  if(mouseX>coPasX&&mouseY>coPasY&&mouseX<(coPasX+ingW)&&mouseY<(coPasY+ingH))
+     {
+       zil=true;
      }
 }
