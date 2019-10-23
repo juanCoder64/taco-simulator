@@ -78,6 +78,7 @@ int coPo4X=735;
 int coPo4Y=346;
 
 
+
 //TAMAÑO DE LOS INGREDIENTES
 int ingW=80;
 int ingH=75;
@@ -91,7 +92,7 @@ boolean chiz=false;
 boolean bishop=false;
 boolean meat=false;
 boolean zil=false;
-boolean onon=false;
+boolean oni=false;
 boolean pineapp=false;
 boolean sRed=false;
 boolean sGreen=false;
@@ -120,7 +121,6 @@ Salsa V    740X,570Y  820X,640Y  A=80*75
 
 void setup(){
   size(1000,700);//TAMAÑO (ES MEJOR NO MOVER)
-  
   //BUSCA LAS IMAGENES POR SU NOMBRE EN LA CARPETA "data"
   back = loadImage("Taco.png");
   tortillaM = loadImage("TortillaM.png");
@@ -134,9 +134,6 @@ void setup(){
   red = loadImage("DelaRoja.png");
   green = loadImage("DelaVerde.png");
   dish = loadImage("Plato.png");
-  //
-
-
 }
 
 
@@ -161,7 +158,7 @@ void draw(){
     imageMode(CENTER);
     image(tortillaM,mouseX,mouseY,tacoSW,tacoSH);
   }
-  else if(torH==true)
+   else if(torH==true)
   {
     imageMode(CENTER);
     image(tortillaH,mouseX,mouseY,tacoSW,tacoSH);
@@ -186,7 +183,18 @@ void draw(){
     imageMode(CENTER);
     image(pasto,mouseX,mouseY,tacoSW,tacoSH);
   }
-  
+  else if(oni==true){
+    image(onion, mouseX-35, mouseY-35, tacoSW, tacoSH);
+  }
+  else if(pineapp==true){
+    image(pine, mouseX-35, mouseY-35, tacoSW, tacoSH);
+  }
+  else if(sGreen==true){
+    image(green, mouseX-35, mouseY-35, tacoSW, tacoSH);
+  }
+   else if(sRed==true){
+    image(red,  mouseX-35, mouseY-35, tacoSW, tacoSH);
+  }
   /*
   image(dish, width/2, height/2-5, tacoSW, tacoSH);
   image(tortillaM, width/2, height/2-5, tacoSW, tacoSH);
@@ -301,5 +309,36 @@ void mouseClicked(){
        zil=true;
      }
   }
-  
+  //////////CEBOLLA
+    if(mouseX>coCeX&&mouseY>coCeY)
+  {
+     if(mouseX<(coCeX+ingW)&&mouseY<(coCeY+ingH))
+     {
+       oni=true;
+     }
+  }
+    //////////PIÑA
+        if(mouseX>coPiX&&mouseY>coPiY)
+  {
+     if(mouseX<(coPiX+ingW)&&mouseY<(coPiY+ingH))
+     {
+       pineapp=true;
+     }
+  }
+      //////////Delaroja
+        if(mouseX>coSaRX&&mouseY>coSaRY)
+  {
+     if(mouseX<(coSaRX+ingW)&&mouseY<(coSaRY+ingH))
+     {
+       sRed=true;
+     }
+  }
+        //////////Delaverde
+        if(mouseX>coSaVX&&mouseY>coSaVY)
+  {
+     if(mouseX<(coSaVX+ingW)&&mouseY<(coSaVY+ingH))
+     {
+       sGreen=true;
+     }
+  }
 }
