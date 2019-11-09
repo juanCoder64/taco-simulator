@@ -239,6 +239,36 @@ void mouseClicked(){
        }
       
     }
+    if(mouseX>40&&mouseY>500&&mouseX<150&&mouseY<600)
+    {
+       if(currentX==coPo1X&&currentY==coPo1Y)
+       {
+          currentX=coPo4X;
+          currentY=coPo4Y;
+       }
+       else if(currentX==coPo2X&&currentY==coPo2Y)
+       {
+          currentX=coPo1X;
+          currentY=coPo1Y;
+       }
+       else if(currentX==coPo3X&&currentY==coPo3Y)
+       {
+          currentX=coPo2X;
+          currentY=coPo2Y;
+       }
+       else if(currentX==coPo4X&&currentY==coPo4Y)
+       {
+          currentX=coPo3X;
+          currentY=coPo3Y;
+       }
+       else
+       {
+          currentX=coPo1X;
+          currentY=coPo1Y;
+       }
+      
+    }
+    println(mouseX, mouseY);
   ////Soltar cosas
   
   ///////////////TORTILLA DE MAIZ
